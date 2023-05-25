@@ -20,6 +20,8 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HomeComponent } from './pages/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductHeaderComponent } from './pages/home/components/product-header/product-header.component';
+import { FiltersComponent } from './pages/home/components/filters/filters.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     HeaderComponent,
     HomeComponent,
+    ProductHeaderComponent,
+    FiltersComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,14 +2,15 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  template: `
-    <p>
-      home works!
-    </p>
-  `,
+  templateUrl: 'home.component.html',
   styles: [
   ]
 })
 export class HomeComponent {
+  public colums: number = 3
 
+
+  info(event: number) {
+    this.colums = event
+  }
 }
