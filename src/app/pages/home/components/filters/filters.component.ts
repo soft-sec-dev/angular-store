@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filters',
-  template: `
-    <p>
-      filters works!
-    </p>
-  `,
+  templateUrl: './filters.component.html',
   styles: [
   ]
 })
 export class FiltersComponent {
+  @Output() showCategory = new EventEmitter<string>()
 
+  categories: Array<string> = ['shoes', 'sports']
+
+
+  onShowCategory(category: string) {
+    this.showCategory.emit(category)
+  }
 }

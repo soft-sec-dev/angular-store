@@ -22,6 +22,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductHeaderComponent } from './pages/home/components/product-header/product-header.component';
 import { FiltersComponent } from './pages/home/components/filters/filters.component';
+import { ProductBoxComponent } from './pages/home/components/product-box/product-box.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { FiltersComponent } from './pages/home/components/filters/filters.compon
     HomeComponent,
     ProductHeaderComponent,
     FiltersComponent,
+    ProductBoxComponent,
   ],
   imports: [
     BrowserModule,
