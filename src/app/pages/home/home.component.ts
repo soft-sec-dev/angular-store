@@ -14,6 +14,7 @@ export class HomeComponent {
   public category: string | undefined
 
   eventFromHeader(event: number) {
+    console.log(`Event Activate: eventFromHeader: ${event}`)
     this.colums = event
     this.rowHeigh = ROW_HEIGT[this.colums]
   }

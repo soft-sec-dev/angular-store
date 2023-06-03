@@ -8,7 +8,22 @@
         <app-product-header (columnsCountChange)="eventFromHeader($event)"></app-product-header>
         <mat-grid-list gutterSize="16" [cols]="colums" [rowHeight]="rowHeigh">
             <mat-grid-tile>
-                <app-product-box></app-product-box>
+                <app-product-box class="w-full" [fullWidthMode]="colums===1"></app-product-box>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <app-product-box class="w-full" [fullWidthMode]="colums===1"></app-product-box>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <app-product-box class="w-full" [fullWidthMode]="colums===1"></app-product-box>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <app-product-box class="w-full" [fullWidthMode]="colums===1"></app-product-box>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <app-product-box class="w-full" [fullWidthMode]="colums===1"></app-product-box>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <app-product-box class="w-full" [fullWidthMode]="colums===1"></app-product-box>
             </mat-grid-tile>
         </mat-grid-list>
     </mat-drawer-content>
