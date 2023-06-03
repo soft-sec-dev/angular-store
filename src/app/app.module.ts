@@ -23,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProductHeaderComponent } from './pages/home/components/product-header/product-header.component';
 import { FiltersComponent } from './pages/home/components/filters/filters.component';
 import { ProductBoxComponent } from './pages/home/components/product-box/product-box.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ProductBoxComponent } from './pages/home/components/product-box/product
     ProductHeaderComponent,
     FiltersComponent,
     ProductBoxComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
