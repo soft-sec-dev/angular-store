@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Product } from 'src/app/helpers/interfaces.m';
+import { CartService } from 'src/app/services/cart.service';
 
 const ROW_HEIGT: { [id: number]: number } = { 1: 400, 3: 335, 4: 350 }
 
@@ -13,6 +15,10 @@ export class HomeComponent {
   public rowHeigh = ROW_HEIGT[this.colums]
   public category: string | undefined
 
+
+  constructor(private cartService: CartService) { }
+
+
   eventFromHeader(event: number) {
     console.log(`Event Activate: eventFromHeader: ${event}`)
     this.colums = event
@@ -23,5 +29,14 @@ export class HomeComponent {
     console.log(newCategory)
     this.category = newCategory
 
+  }
+  onAddTocard(product: Product) {
+    this.cartService.addToCart({
+      product: product.image,
+      name: product.title,
+      price: product.price,
+      quantity: 1,
+      id: product.id
+    })
   }
 }
