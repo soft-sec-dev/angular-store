@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Cart, CartItem } from 'src/app/helpers/interfaces.m';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { Cart, CartItem } from 'src/app/helpers/interfaces.m';
   ]
 })
 export class HeaderComponent {
-  private _cart: Cart = {items:[]}
+  private _cart: Cart = {items:[{id:1, name:'product', price:12, product:'weqwe', quantity:12}]}
   itemsQuantity = 0
 
   @Input()
@@ -22,6 +23,12 @@ export class HeaderComponent {
       .map((item:CartItem)=>item.quantity)
       .reduce((prev,current)=> prev + current)
   }
+  getTotal(items: CartItem[]):number{
+    return this.cartService.getTotal(items)
+  }
+  onClear(){
+    this.cartService.clearCart()
+  }
 
-  constructor(){}
+  constructor(private cartService: CartService){}
 }
